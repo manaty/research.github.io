@@ -6,10 +6,15 @@
   </head>
 
   <body>
-    <script src="https://www.paypal.com/sdk/js?client-id=YOUR_SB_CLIENT_ID"> // Replace YOUR_SB_CLIENT_ID with your sandbox client ID
+    <script src="https://www.paypal.com/sdk/js?currency=EUR&client-id=AU95Yn27Ub86v-w0Z0qGCgs91d8x5Q3JMdP7opT1GiQhR0TeM3HbR1cAwHzP11Ve3bXt0KYRuWuizqYH"> // Replace YOUR_SB_CLIENT_ID with your sandbox client ID
     </script>
 
-    <div id="paypal-button-container"></div>
+    <h1>Janus porject</h1>
+    
+    
+    <div id="paypal-button-container">
+    
+    </div>
 
     <!-- Add the checkout buttons, set up the order and approve the order -->
     <script>
@@ -18,7 +23,7 @@
           return actions.order.create({
             purchase_units: [{
               amount: {
-                value: '0.01'
+                value: '100'
               }
             }]
           });
@@ -30,5 +35,7 @@
         }
       }).render('#paypal-button-container'); // Display payment options on your web page
     </script>
+    
+    
   </body>
 </html>
