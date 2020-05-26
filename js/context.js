@@ -18,7 +18,7 @@ const redirectIf=function(lang,target){
    console.log("lang="+clang);
    if(clang!="" && clang==lang){
      redirect=true;
-   } else if(getNavigatorLanguage()!=lang){
+   } else if(getNavigatorLanguage()==lang){
      redirect=true;
    }
    if(redirect){
