@@ -3,8 +3,10 @@ const redirectIfNot=function(lang,target){
    let redirect = false;
    let clang = getCookie("lang");
    console.log("lang="+clang);
-   if(clang!="" && clang!=lang){
-     redirect=true;
+   if(clang!=""){
+     if(clang!=lang){
+       redirect=true;
+     }
    } else if(getNavigatorLanguage()!=lang){
      redirect=true;
    }
@@ -16,8 +18,10 @@ const redirectIf=function(lang,target){
    let redirect = false;
    let clang = getCookie("lang");
    console.log("lang="+clang);
-   if(clang!="" && clang==lang){
-     redirect=true;
+   if(clang!=""){
+     if (clang==lang){
+       redirect=true;
+     }
    } else if(getNavigatorLanguage()==lang){
      redirect=true;
    }
