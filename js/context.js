@@ -16,7 +16,7 @@ const redirectIf=function(lang,target){
    let redirect = false;
    let clang = getCookie("lang");
    console.log("lang="+clang);
-   if(clang!="" && clang=lang){
+   if(clang!="" && clang==lang){
      redirect=true;
    } else if(getNavigatorLanguage()!=lang){
      redirect=true;
