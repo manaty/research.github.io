@@ -14,7 +14,7 @@ const redirectIfNot=function(lang,target){
    }
 }
 
-const setLangCookie(lang){
+const setLangCookie= function(lang){
   setCookie("lang",lang,30);
 }
 
