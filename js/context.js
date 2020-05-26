@@ -5,15 +5,26 @@ const redirectIfNot=function(lang,target){
    console.log("lang="+clang);
    if(clang!="" && clang!=lang){
      redirect=true;
-   }
-   if(getNavigatorLanguage()!=lang){
+   } else if(getNavigatorLanguage()!=lang){
      redirect=true;
    }
    if(redirect){
      window.location.href = target;
    }
 }
-
+const redirectIf=function(lang,target){
+   let redirect = false;
+   let clang = getCookie("lang");
+   console.log("lang="+clang);
+   if(clang!="" && clang=lang){
+     redirect=true;
+   } else if(getNavigatorLanguage()!=lang){
+     redirect=true;
+   }
+   if(redirect){
+     window.location.href = target;
+   }
+}
 const setLangCookie= function(lang){
   setCookie("lang",lang,30);
 }
